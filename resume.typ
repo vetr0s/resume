@@ -19,8 +19,20 @@
   personal-site: personal-site,
   accent-color: "#26428b",
   font: "New Computer Modern",
-    font-size: 9.5pt,
+    font-size: 9pt,
 )
+
+== Skills
+
+*Languages:* C/C++, Java, Python, Go, Rust, Odin, JavaScript, Lua, SQL, Bash
+
+*Tools:* Git/GitHub, Docker, Linux, systemd, GDB, Valgrind, SSH, VMware/KVM, Neovim & Emacs
+
+*Libraries:* SDL3, Raylib, HLSL, pandas, NumPy, scikit-learn, Streamlit
+
+// Tighten vertical spacing to fit a single page
+#set par(leading: 0.55em)
+#show list: set block(spacing: 0.55em)
 
 == Education
 
@@ -30,7 +42,7 @@
   dates: dates-helper(start-date: "August 2023", end-date: "May 2026"),
   degree: "Bachelor of Science in Computer Science",
 )
-- Relevant Coursework: CSc 452 Compilers, CSc 460 Database Design, CSc 445 Algorithms, CSc 425 Computer Networking, CSc 346 Cloud Computing, CSc 352 Systems Programming & UNIX
+- Relevant Coursework: Compilers, Database Design, Algorithms, Computer Networking, Cloud Computing, Systems Programming
 
 #edu(
     institution: "South Puget Sound Community College",
@@ -38,6 +50,7 @@
     dates: dates-helper(start-date: "September 2021", end-date: "May 2023"),
     degree: "Associate of Arts",
 )
+
 
 == Work Experience
 
@@ -62,38 +75,53 @@
 == Projects
 
 #project(
-  dates: dates-helper(start-date: "January 2026", end-date: "Present"),
-  name: "Procedurally Generated DOOM-style Raycasting FPS",
-  role: "Maintainer",
+  dates: dates-helper(start-date: "June 2026", end-date: "Present"),
+  name: "Mach Game Engine",
+  role: "Author",
+  url: "github.com/vetr0s/mach",
 )
+- Building a 2D and 3D game engine in pure C with SDL3, with isometric and standard camera systems and cross-platform shaders.
+- Split the engine from the game so the engine runs game code through a callback interface and never depends on game types, keeping it reusable across projects.
+- Wrote the core subsystems from scratch, including vector and matrix math, an SDL_GPU renderer, input handling, and the main game loop, all built as a unity build with one #raw("clang") call and no separate build system.
+
+// NOTE: Replace this with a P.L.
+#project(
+  dates: dates-helper(start-date: "January 2026", end-date: "February 2026"),
+  name: "GateRelay: Secure Linux TCP Relay Service",
+  role: "Author",
+  url: "github.com/vetr0s/gaterelay",
+)
+- Built a production-grade TCP relay in Go forwarding public ingress traffic to a controlled backend, with connection limits, timeouts, graceful shutdown, and structured JSON logging.
+- Hardened it with defense-in-depth: a non-root systemd user, sandboxing (capability dropping, syscall filtering, ProtectSystem), ufw firewall rules, and SSH key-only access, with a documented threat model.
 
 #project(
   dates: dates-helper(start-date: "March 2025", end-date: "May 2025"),
-  name: "Multivariate Urban Crime Data Analysis - Tucson, Arizona",
+  name: "Urban Crime Data Analysis",
   role: "Collaborator",
+  url: "github.com/vetr0s/tucson-crime-analysis",
 )
+- Ran a multivariate analysis of Tucson Police crime data against neighborhood income and streetlight locations to test how socioeconomic and environmental factors relate to crime.
+- Built preprocessing, geospatial, and modeling pipelines in Python (pandas, geopandas, scikit-learn, statsmodels) using Ridge Regression, Random Forest, Logistic Regression, and OLS to predict high-crime wards.
 
 == Extracurricular Activities
 
 #extracurriculars(
-    activity: "FIRST Robotics Competition team 4450 (Safety Captait)",
+    activity: "FIRST Robotics Competition team 4450 (Safety Captain)",
     dates: dates-helper(start-date: "September 2021", end-date: "June 2023"),
 )
-- Led safety operations for a competitive engineering team, enforcing shop, electrical, and tooling safety standards across mechanical, electrical, and software work under strict build and competition deadlines.
-- Jointly planned and executed an international outreach program, coordinating safety planning and risk mitigation for a \$60,000 fundraising effort supporting travel of 17 students and delivery of metal-based FTC robotics kits to Cairo, Egypt, enabling hands-on robotics education in a resource-constrained environment.
+- Led safety operations for a competitive engineering team, enforcing shop, electrical, and tooling safety standards under strict build and competition deadlines.
+- Co-planned an international outreach program, coordinating risk mitigation for a \$60,000 fundraiser that sent 17 students and metal-based FTC robotics kits to Cairo, Egypt for hands-on robotics education.
 
 #extracurriculars(
   activity: "Google Developer Student Club",
   dates: dates-helper(start-date: "August 2023", end-date: "May 2026"),
 )
+- Participated in peer-led workshops and collaborative projects on modern software development and Google Cloud technologies.
 
 #extracurriculars(
   activity: "HackAZ 2026",
-  dates: dates-helper(start-date: "April 25th", end-date: "April 26th 2026"),
+  dates: dates-helper(start-date: "April 2026", end-date: "April 2026"),
 )
+- Built and deployed GridWise Energy with 3 teammates in a 24-hour hackathon, a live web app analyzing energy usage from local power-grid data.
+- Shipped authentication, time-series usage tracking, AI insights via a chatbot and an ML forecast model, and an opt-in global leaderboard.
 
-== Skills
-
-*Languages:* C/C++, Java, Python, Odin
-
-*Tools:* Git/GitHub, Docker, VMware/KVM, GDB, Valgrind, SSH
